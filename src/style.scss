@@ -257,3 +257,51 @@ select {
   bottom: 5px;
   right: 5px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .main {
+    display: block;
+  }
+  .title, .aftertitle, .offer, .btn {
+    display: none;
+  }
+  .form {
+    width: 90%;
+  }
+  .form__postal, .form__name {
+    flex-direction: column;
+    div {
+      flex-direction: column;
+      width: 100%;
+      }
+    div:nth-child(2) {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__radio {
+    div {
+      margin-left: 30px;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__aspect {
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__img {
+    width: 50%;
+  }
+  .form__title {
+    font-size: 16px;
+  }
+  .form__beforetitle {
+    font-size: 12px;
+  }
+}
