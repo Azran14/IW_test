@@ -22,7 +22,14 @@
       <h3 class="aftertitle">Se satisfaire du maximum</h3>
       <img class="offer" src="src/img/offre.svg" alt="offer">
       <div class="btn">
-        <button>Voir conditions</button>
+        <button id="button">Voir conditions</button>
+      </div>
+    </div>
+    <div class="form__offer">
+      <div class="offer__container">
+        <p>A partir de</p>
+        <div><span>299</span><h4>€/mois</h4></div>
+        <p>1er loyer majoré de 1500€</p>
       </div>
     </div>
     <div class="form">
@@ -59,12 +66,12 @@
           </div>
           <div class="form__aspect">
             <label> N° de téléphone: </label>
-            <input type="tel" id="tel" name="phonenumber" placeholder="N° de téléphone" required>
+            <input type="tel" pattern="[0-9]{10}" id="tel" name="phonenumber" placeholder="N° de téléphone" required>
           </div>
           <div class="form__postal">
             <div>
               <label> Code postal: </label>
-              <input type="number" max="5" id="number" name="code" placeholder="code postal" required>
+              <input type="number" id="number" name="code" placeholder="code postal" required>
             </div>
             <div>
               <label> Ville: </label>
@@ -86,6 +93,19 @@
         </form>
       </div>
       <img class="warranty" src="src/img/garantie.svg" alt="Garantie 5ans">
+      <div class="conditions" id="conditions"> 
+        <div class="conditions__btn">
+          <button id="button2"></button>
+        </div>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto delectus maxime exercitationem odio quasi sit autem quaerat repudiandae ipsum laborum neque est itaque repellendus ullam, quos nemo iure, aliquam eligendi!<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti, dolores optio esse nostrum voluptatum molestias sit doloremque perspiciatis, commodi voluptas. Assumenda, ullam iste. Obcaecati repudiandae quae tempora nesciunt consequatur? <br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit expedita iure dolorem quae incidunt, adipisci modi sed! Maiores quod hic, eum facere explicabo illum est quam. Quasi consectetur praesentium similique.<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, saepe vitae amet, eligendi possimus tempora perferendis magni facilis temporibus autem iure molestiae blanditiis accusamus. Laudantium odit fuga velit labore nostrum!<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita ea dicta itaque exercitationem ut iste, deserunt minima fugit rem enim! Eveniet, laudantium! Illo culpa suscipit, optio quam dolore ipsa.<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, repudiandae a. Iusto, tenetur perferendis blanditiis facilis non, harum earum fugiat repellendus optio quam consectetur sed? Vitae vel aspernatur earum. Quidem.<br><br>
+        </span>
+      </div>
     </div>
   </div>
 </body>

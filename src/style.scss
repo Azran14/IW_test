@@ -18,6 +18,10 @@
   src: url("../src/fonts/Montserrat-Bold.ttf") format("woff");
 }
 
+body {
+  overflow-y: hidden;
+}
+
 .main {
   display: grid;
   grid-template-columns: 66% 34%;
@@ -45,7 +49,6 @@
   left: 0;
   right: 0;
   max-width: 100%;
-  -webkit-transition: opacity ease-out 0.5s;
   transition: opacity ease-out 0.5s;
 }
 
@@ -66,7 +69,7 @@
 }
 
 .carousel-arrow {
-  z-index: 3;
+  z-index: 6;
   display: block;
   position: absolute;
   width: 36px;
@@ -105,7 +108,7 @@
 .title {
   z-index: 4;
   color: white;
-  position: absolute;
+  position: fixed;
   top: 50px;
   font-family: "Montserrat-SemiBold";
   font-size: 40px;
@@ -115,7 +118,7 @@
 .aftertitle {
   z-index: 4;
   color: white;
-  position: absolute;
+  position: fixed;
   top: 95px;
   font-family: "Montserrat-regular";
   font-size: 24px;
@@ -123,7 +126,7 @@
 }
 
 .offer {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   width: 200px;
   left: 0;
@@ -131,7 +134,7 @@
 }
 
 .btn {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   bottom: 0;
   button {
@@ -147,7 +150,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
 .form__container {
@@ -157,7 +159,12 @@
   width: 80%;
 }
 
+.form__offer {
+  display: none;
+}
+
 .form__img {
+  margin-top: 20px;
   width: 35%;
   margin-bottom: 35px;
 }
@@ -258,15 +265,128 @@ select {
   right: 5px;
 }
 
+.conditions {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+}
+
+.conditions__btn {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    background-image: url("/src/img/cross.svg");
+    margin-bottom: 20px;
+    width: 16px;
+    height: 16px;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .conditions {
+    font-size: 13px;
+  }
+  .form__title {
+    font-size: 18px;
+  }
+  .form__beforetitle {
+    font-size: 14px;
+  }
+  .form__img {
+    width: 60%;
+  }
+  .form__postal, .form__name {
+    div {
+      width: 48%;
+    }
+    div:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+  .form__radio {
+    div {
+      margin-left: 40px;
+    }
+  }
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 425px) {
+  body {
+    overflow: scroll;
+  }
   .main {
-    display: block;
+    grid-template-rows: 40% 8% 60%;
+    grid-template-columns: 100%;
+  }
+  .carousel-img {
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+    min-height: 363.59px;
+  }
+  .carousel-arrow {
+    margin-top: 150px;
   }
   .title, .aftertitle, .offer, .btn {
+    position: relative;
+  }
+  .title {
+    font-size: 20px;
+    letter-spacing: -1px;
+    top: 10%;
+    left: 5%;
+  }
+  .aftertitle {
+    font-size: 12px;
+    top: 12%;
+    left: 5%;
+  }
+  .offer {
     display: none;
   }
+  .btn {
+    top: 33vh;
+    button {
+      font-size: 6px;
+      height: 10px;
+    }
+  }
   .form {
-    width: 90%;
+    width: 100%;
+  }
+  .form__offer {
+    display: block;
+    background-color: #244770;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    .offer__container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      margin-left: 20px;
+      p {
+        font-size: 8px;
+        color: white;
+        opacity: 80%;
+      }
+      div {
+        display: flex;
+        color: white;
+        span {
+          font-size: 28px;
+          font-weight: bold;
+        }
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
   }
   .form__postal, .form__name {
     flex-direction: column;
@@ -284,7 +404,7 @@ select {
   }
   .form__radio {
     div {
-      margin-left: 30px;
+      margin-left: 50px;
     }
     label {
       font-size: 12px;
@@ -296,12 +416,20 @@ select {
     }
   }
   .form__img {
-    width: 50%;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 30px;
   }
   .form__title {
     font-size: 16px;
   }
   .form__beforetitle {
+    font-size: 12px;
+  }
+  .warranty {
+    display: none;
+  }
+  .conditions {
     font-size: 12px;
   }
 }
