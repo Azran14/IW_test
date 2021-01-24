@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.scss" />
+  <link rel="stylesheet" href="src/reset.scss" />
+  <script defer src="src/script.js"></script>
+  <title>IW TEST</title>
+</head>
+<body>
+  <div class="main">
+    <div class="slider">
+      <div class="carousel">
+        <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
+        <button type="button" id="carousel-arrow-next" class="carousel-arrow carousel-arrow-next" arial-label="Image suivante"></button>
+        <img id="carousel-0" class="carousel-img carousel-img-displayed" src="src/img/slide_1.jpg" alt="Hyundai Tucson">
+        <img id="carousel-1" class="carousel-img carousel-img-noDisplay" src="src/img/slide_2.jpg" alt="Hyundai Tucson">
+        <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="src/img/slide_3.jpg" alt="Hyundai Tucson">
+      </div>
+      <h1 class="title">Nouveau Hyundai TUCSON</h1>
+      <h3 class="aftertitle">Se satisfaire du maximum</h3>
+      <img class="offer" src="src/img/offre.svg" alt="offer">
+      <div class="btn">
+        <button>Voir conditions</button>
+      </div>
+    </div>
+    <div class="form">
+      <div class="form__container">
+        <img class="form__img" src="src/img/logo.svg" alt="Logo Hyundai">
+        <p class="form__beforetitle">Reserver votre essai de</p>
+        <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
+        <hr class="form__transition">
+        <form>
+          <div class="form__aspect">
+            <label> Email: </label>
+            <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+          </div>
+          <div class="form__radio">
+            <label> Civilité: </label>
+            <div>
+              <input type="radio" id="Mme" name="civilite" value="Mme" required>
+              <label for="Mme"> Mme. </label>
+            </div>
+            <div>
+              <input type="radio" id="M" name="civilite" value="M" required>
+              <label for="M"> M. </label>
+            </div>
+          </div>
+          <div class="form__name">
+            <div>
+              <label> Nom: </label>
+              <input type="text" id="text1" name="lastname" placeholder="Nom" required>
+            </div>
+            <div>
+              <label> Prénom: </label>
+              <input type="text" id="text2" name="firstname" placeholder="Prénom" required>
+            </div>
+          </div>
+          <div class="form__aspect">
+            <label> N° de téléphone: </label>
+            <input type="tel" id="tel" name="phonenumber" placeholder="N° de téléphone" required>
+          </div>
+          <div class="form__postal">
+            <div>
+              <label> Code postal: </label>
+              <input type="number" max="5" id="number" name="code" placeholder="code postal" required>
+            </div>
+            <div>
+              <label> Ville: </label>
+              <input type="text" id="text3" name="city" placeholder="Ville" required>
+            </div>
+          </div>
+          <div class="form__aspect">
+            <label> Concession: </label>
+            <select name="concession" id="concessions" required>
+              <option value="">Sélectionnez votre concession</option>
+              <option value="1">Celle-ci</option>
+              <option value="2">OU</option>
+              <option value="3">Celle-la</option>
+            </select>
+          </div>
+          <div class="form__btn">
+            <button> Réserver un essai </button>
+          </div>
+        </form>
+      </div>
+      <img class="warranty" src="src/img/garantie.svg" alt="Garantie 5ans">
+    </div>
+  </div>
+</body>
+</html>
