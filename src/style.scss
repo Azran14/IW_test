@@ -143,6 +143,7 @@ body {
     border: none;
     background-color: black;
     color: lightgray;
+    cursor: pointer;
   }
 }
 
@@ -200,6 +201,7 @@ input {
   padding-bottom: 3px;
   border: 1px solid;
   border-color: lightgray;
+  cursor: pointer;
 }
 
 .form__aspect {
@@ -242,6 +244,7 @@ select {
   padding: 3px;
   border: 1px solid;
   border-color: lightgray;
+  cursor: pointer;
 }
 
 .form__btn {
@@ -255,6 +258,7 @@ select {
     height: 30px;
     border: 1px solid;
     border-color: lightgray;
+    cursor: pointer;
   }
 }
 
@@ -282,6 +286,7 @@ select {
     width: 16px;
     height: 16px;
     border: none;
+    cursor: pointer;
   }
 }
 
