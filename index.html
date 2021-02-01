@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="src/style.scss" />
   <link rel="stylesheet" href="src/reset.scss" />
+  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+  <script src="/path/to/flickity.pkgd.min.js"></script>
   <script defer src="src/script.js"></script>
   <title>IW TEST</title>
 </head>
 <body>
   <div class="main">
     <div class="slider">
-      <div class="carousel">
+      <!-- <div class="carousel">
         <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
         <button type="button" id="carousel-arrow-next" class="carousel-arrow carousel-arrow-next" arial-label="Image suivante"></button>
         <img id="carousel-0" class="carousel-img carousel-img-displayed" src="src/img/slide_1.jpg" alt="Hyundai Tucson">
         <img id="carousel-1" class="carousel-img carousel-img-noDisplay" src="src/img/slide_2.jpg" alt="Hyundai Tucson">
         <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="src/img/slide_3.jpg" alt="Hyundai Tucson">
+      </div> -->
+      <div class="main-carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
+        <div class="carousel-cell" style="background-image: url(src/img/slide_1.jpg);"><h1 class="title">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle">Se satisfaire du maximum</h3></div>
+        <div class="carousel-cell" style="background-image: url(src/img/slide_2.jpg);"><h1 class="title">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle">Se satisfaire du maximum</h3><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
+        <div class="carousel-cell" style="background-image: url(src/img/slide_3.jpg);"><h1 class="title title__black">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle title__black">Se satisfaire du maximum</h3><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
       </div>
-      <h1 class="title">Nouveau Hyundai TUCSON</h1>
-      <h3 class="aftertitle">Se satisfaire du maximum</h3>
       <img class="offer" src="src/img/offre.svg" alt="offer">
       <div class="btn">
         <button id="button">Voir conditions</button>
@@ -41,46 +47,46 @@
         <form>
           <div class="form__aspect">
             <label> Email: </label>
-            <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+            <input type="email" id="mail" name="user_mail" placeholder="Email" >
           </div>
           <div class="form__radio">
             <label> Civilité: </label>
             <div>
-              <input type="radio" id="Mme" name="civilite" value="Mme" required>
+              <input type="radio" id="Mme" name="civilite" value="Mme" >
               <label for="Mme"> Mme. </label>
             </div>
             <div>
-              <input type="radio" id="M" name="civilite" value="M" required>
+              <input type="radio" id="M" name="civilite" value="M" >
               <label for="M"> M. </label>
             </div>
           </div>
           <div class="form__name">
             <div>
               <label> Nom: </label>
-              <input type="text" id="text1" name="lastname" placeholder="Nom" required>
+              <input type="text" id="text1" name="lastname" placeholder="Nom" >
             </div>
             <div>
               <label> Prénom: </label>
-              <input type="text" id="text2" name="firstname" placeholder="Prénom" required>
+              <input type="text" id="text2" name="firstname" placeholder="Prénom" >
             </div>
           </div>
           <div class="form__aspect">
             <label> N° de téléphone: </label>
-            <input type="tel" pattern="[0-9]{10}" id="tel" name="phonenumber" placeholder="N° de téléphone" required>
+            <input type="tel" pattern="[0-9]{10}" id="tel" name="phonenumber" placeholder="N° de téléphone" >
           </div>
           <div class="form__postal">
             <div>
               <label> Code postal: </label>
-              <input type="number" id="number" name="code" placeholder="code postal" required>
+              <input type="number" id="number" name="code" placeholder="Code postal" >
             </div>
             <div>
               <label> Ville: </label>
-              <input type="text" id="text3" name="city" placeholder="Ville" required>
+              <input type="text" id="text3" name="city" placeholder="Ville" >
             </div>
           </div>
           <div class="form__aspect">
             <label> Concession: </label>
-            <select name="concession" id="concessions" required>
+            <select name="concession" id="concessions" >
               <option value="">Sélectionnez votre concession</option>
               <option value="1">Celle-ci</option>
               <option value="2">OU</option>
@@ -88,7 +94,7 @@
             </select>
           </div>
           <div class="form__btn">
-            <button> Réserver un essai </button>
+            <button> <a href="src/test.html" target="_blank">Réserver un essai </a></button>
           </div>
         </form>
       </div>
@@ -108,5 +114,6 @@
       </div>
     </div>
   </div>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

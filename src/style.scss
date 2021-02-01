@@ -33,83 +33,27 @@ body {
   overflow: hidden;
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 0;
-  background: #ddd;
-}
-
-.carousel-img {
+.carousel-cell {
   width: 100%;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  transition: opacity ease-out 0.5s;
+  background-size: cover;
+  .carousel-cell:nth-child(2) {
+    object-position: 70% 0;
+  }
 }
 
-.carousel-img-displayed {
-  display: block;
-  opacity: 1;
-  z-index: 2;
-}
-
-.carousel-img-hidden {
-  display: block;
-  opacity: 0;
-  z-index: 1;
-}
-
-.carousel-img-noDisplay {
-  display: none;
-}
-
-.carousel-arrow {
-  z-index: 6;
-  display: block;
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  top: 50%;
-  margin-top: 500px;
-  border-radius: 50%;
-  border: 0;
-  background-color: #fff;
-  opacity: 50%;
-  background-image: url("/src/img/arrowright.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
-  cursor: pointer;
-  -webkit-transition: background-size 0.15s ease-out;
-  transition: background-size 0.15s ease-out;
-}
-
-.carousel-arrow:hover,
-.carousel-arrow:focus {
-  background-size: 22px 22px;
-}
-
-.carousel-arrow-next {
-  right: 20px;
-}
-
-.carousel-arrow-prev {
-  left: 20px;
-  -webkit-transform: rotateZ(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotateZ(180deg);
+.flickity-page-dots {
+  bottom: 25px;
+  .dot {
+    background-color: white;
+  }
 }
 
 .title {
   z-index: 4;
   color: white;
-  position: fixed;
-  top: 50px;
+  position: absolute;
+  top: 30px;
   font-family: "Montserrat-SemiBold";
   font-size: 40px;
   left: 30px;
@@ -118,8 +62,22 @@ body {
 .aftertitle {
   z-index: 4;
   color: white;
-  position: fixed;
-  top: 95px;
+  position: absolute;
+  top: 75px;
+  font-family: "Montserrat-regular";
+  font-size: 24px;
+  left: 30px;
+}
+
+.title__black {
+  color: black;
+}
+
+.text__slider {
+  z-index: 4;
+  color: white;
+  position: absolute;
+  bottom: 30px;
   font-family: "Montserrat-regular";
   font-size: 24px;
   left: 30px;
@@ -134,7 +92,7 @@ body {
 }
 
 .btn {
-  position: fixed;
+  position: absolute;
   z-index: 4;
   bottom: 0;
   button {
@@ -178,7 +136,7 @@ body {
 
 .form__title {
   font-family: "Montserrat-Bold";
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .form__transition {
@@ -196,9 +154,10 @@ form {
 }
 
 input {
+  margin-top: 3px;
   padding-left: 15px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid;
   border-color: lightgray;
   cursor: pointer;
@@ -217,7 +176,7 @@ input {
   display: flex;
   margin-top: 10px;
   div {
-    margin-left: 120px;
+    margin-left: 110px;
   }
   label {
     font-family: "Montserrat-SemiBold";
@@ -241,7 +200,10 @@ input {
 }
 
 select {
-  padding: 3px;
+  margin-top: 3px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid;
   border-color: lightgray;
   cursor: pointer;
@@ -250,15 +212,18 @@ select {
 .form__btn {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 25px;
   button {
     background-color: #244770;
     color: white;
-    font-size: 12px;
-    height: 30px;
+    font-size: 14px;
+    height: 40px;
+    width: 150px;
     border: 1px solid;
     border-color: lightgray;
     cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -301,7 +266,7 @@ select {
     font-size: 14px;
   }
   .form__img {
-    width: 60%;
+    width: 45%;
   }
   .form__postal, .form__name {
     div {
@@ -316,8 +281,97 @@ select {
       margin-left: 40px;
     }
   }
+  .aftertitle {
+    font-size: 24px;
+  }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 32px;
+  }
+  .carousel-cell {
+    background-position: 50% 25%;
+  }
+  .form__postal, .form__name {
+    flex-direction: column;
+    div {
+      flex-direction: column;
+      width: 100%;
+      }
+    div:nth-child(2) {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__radio {
+    div {
+      margin-left: 30px;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__aspect {
+    label {
+      font-size: 12px;
+    }
+  }
+  .form__title {
+    font-size: 14px;
+  }
+  .form__beforetitle {
+    font-size: 12px;
+  }
+  .form__img {
+    width: 45%;
+  }
+  .offer {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 767px) and (orientation: portrait) {
+  body {
+    overflow: scroll;
+  }
+  .title {
+    position: relative;
+    font-size: 24px;
+  }
+  .aftertitle {
+    position: relative;
+    font-size: 18px;
+    top: 7%
+  }
+  .main {
+    grid-template-rows: 60% 8% 60%;
+    grid-template-columns: 100%;
+  }
+  .offer {
+    display: none;
+  }
+  // .carousel-arrow {
+  //   margin-top: 30vh;
+  // }
+  // .carousel-img {
+  //   height: auto;
+  //   object-fit: cover;
+  //   min-height: 543px;
+  // }
+  // #carousel-2 {
+  //   object-position: 70% 0;
+  // }
+  .warranty {
+    display: none;
+  }
+  .btn {
+    top: 58vh;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body {
@@ -327,34 +381,66 @@ select {
     grid-template-rows: 40% 8% 60%;
     grid-template-columns: 100%;
   }
-  .carousel-img {
-    width: 100%;
-    max-width: 425px;
-    height: auto;
-    min-height: 363.59px;
+  
+  .main-carousel {
+    height: 100%;
   }
-  .carousel-arrow {
-    margin-top: 150px;
+
+  .flickity-viewport {
+    height: 355px;
   }
+
+  .carousel-cell {
+    height: 100%;
+    background-position: 50% 25%;
+  }
+
+  .is-selected {
+    height: 100%;
+  }
+  
+  // .flickity-page-dots {
+  //   position: relative;
+  //   bottom: 25px;
+  //   .dot {
+  //     background-color: white;
+  //   }
+  // }
+  // .carousel-img {
+  //   height: auto;
+  //   min-height: 364px;
+  //   object-fit: cover;
+  // }
+  // #carousel-2 {
+  //   object-position: 75% 0;
+  // }
+  // .carousel-arrow {
+  //   margin-top: 150px;
+  // }
   .title, .aftertitle, .offer, .btn {
     position: relative;
   }
   .title {
     font-size: 20px;
     letter-spacing: -1px;
-    top: 10%;
-    left: 5%;
+    top: 3%;
+    left: 3%;
   }
   .aftertitle {
     font-size: 12px;
-    top: 12%;
-    left: 5%;
+    top: 4%;
+    left: 3%;
+  }
+  .text__slider{
+    font-size: 12px;
+    left: 3%;
+    bottom: 3%;
   }
   .offer {
     display: none;
   }
   .btn {
-    top: 33vh;
+    top: 34vh;
     button {
       font-size: 6px;
       height: 10px;

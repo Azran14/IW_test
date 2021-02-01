@@ -42,3 +42,4 @@ document.querySelector("#button2").onclick = function() {
   document.querySelector("#conditions").style.display="none";
   }
 }
+
