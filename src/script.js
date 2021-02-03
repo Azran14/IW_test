@@ -43,3 +43,21 @@ document.querySelector("#button2").onclick = function() {
   }
 }
 
+document.querySelector("#button3").onclick = function() {
+  if (window.getComputedStyle(document.querySelector('#validation')).display=='none'){
+  document.querySelector("#validation").style.display="grid",
+  document.querySelector("#validation").style.transition="10s",
+  document.querySelector("#main").style.display="none";
+  } else {
+  document.querySelector("#validation").style.display="none";
+  }
+}
+
+
+$(function () {
+  $('#form').parsley().on('field:validated', function() {
+    var ok = $('.parsley-error').length === 0;
+    $('.bs-callout-info').toggleClass('hidden', !ok);
+    $('.bs-callout-warning').toggleClass('hidden', ok);
+  })
+});

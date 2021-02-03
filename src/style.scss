@@ -23,10 +23,6 @@
   src: url("../src/fonts/Montserrat-Bold.ttf") format("woff");
 }
 
-body {
-  overflow-y: hidden;
-}
-
 .main {
   display: grid;
   grid-template-columns: 66% 34%;
@@ -175,6 +171,7 @@ input {
   cursor: pointer;
 }
 
+
 .form__aspect {
   display: flex;
   flex-direction: column;
@@ -240,18 +237,60 @@ select {
 }
 
 .warranty {
-  position: absolute;
-  width: 120px;
-  bottom: 5px;
-  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  .warranty__img {
+    width: 20%;
+  }
 }
 
 .conditions {
-  display: none;
   position: absolute;
-  height: 100vh;
+  display: none;
   background-color: white;
   padding: 20px;
+  max-height: 90vh;
+}
+
+.validation {
+  display: none;
+  grid-template-columns: 66vw 34vw;
+  height: 100vh;
+}
+
+.firspart {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.secondpart {
+  grid-column: 2;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__return {
+  padding: 20px;
+  height: 5vh;
+  button {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .conditions__btn {
@@ -391,9 +430,6 @@ select {
   // #carousel-2 {
   //   object-position: 70% 0;
   // }
-  .warranty {
-    display: none;
-  }
   .btn {
     top: 58vh;
   }
@@ -411,7 +447,7 @@ select {
     overflow: scroll;
   }
   .main {
-    grid-template-rows: 40% 8% 60%;
+    grid-template-rows: 40% 8% 90%;
     grid-template-columns: 100%;
   }
   
@@ -527,9 +563,6 @@ select {
   }
   .form__beforetitle {
     font-size: 12px;
-  }
-  .warranty {
-    display: none;
   }
   .conditions {
     font-size: 12px;

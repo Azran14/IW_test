@@ -14,7 +14,19 @@
   <title>IW TEST</title>
 </head>
 <body>
-  <div class="main">
+  <div class="validation" id="validation">
+    <div class="firspart">
+      <div class="image">
+        <img src="/src/img/hyundai.jpg">
+      </div>
+      <h1 class="title title__black">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle title__black">Se satisfaire du maximum</h3>
+    </div>
+    <div class="secondpart">
+      <span> Merci Maurice pour votre achat</span>
+      <img src="src/img/confetti.svg">
+    </div>
+  </div>
+  <div class="main" id="main">
     <div class="slider">
       <!-- <div class="carousel">
         <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
@@ -44,7 +56,7 @@
         <form id="form" data-parsley-validate="">
           <div class="form__aspect">
             <label> Email: </label>
-            <input type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email*" required>
+            <input type="email" data-parsley-type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email*" required>
           </div>
           <div class="form__radio">
             <label> Civilité: </label>
@@ -53,7 +65,7 @@
               <label for="Mme"> Mme. </label>
             </div>
             <div>
-              <input type="radio" data-parsley-maxlength="42" id="M" name="civilite" value="M" required>
+              <input type="radio" id="M" name="civilite" value="M" required>
               <label for="M"> M. </label>
             </div>
           </div>
@@ -74,11 +86,11 @@
           <div class="form__postal">
             <div>
               <label> Code postal: </label>
-              <input type="number" id="number" name="code" placeholder="Code postal*" required>
+              <input maxlength="5" data-parsley-maxlength="5" pattern="[0-9]{5}" id="number" name="code" placeholder="Code postal*" required>
             </div>
             <div>
               <label> Ville: </label>
-              <input type="text" id="text3" name="city" placeholder="Ville*" required>
+              <input type="text" id="text3" name="city" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="Ville*" required>
             </div>
           </div>
           <div class="form__aspect">
@@ -91,11 +103,10 @@
             </select>
           </div>
           <div class="form__btn">
-            <button type="submit" value="validate">Réserver un essai</button>
+            <button type="submit" id="button3" value="validate">Réserver un essai</button>
           </div>
         </form>
       </div>
-      <img class="warranty" src="src/img/garantie.svg" alt="Garantie 5ans">
       <div class="conditions" id="conditions"> 
         <div class="conditions__btn">
           <button id="button2"></button>
@@ -108,22 +119,12 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita ea dicta itaque exercitationem ut iste, deserunt minima fugit rem enim! Eveniet, laudantium! Illo culpa suscipit, optio quam dolore ipsa.<br><br>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem, facilis beatae dolores quo rem a non doloribus numquam animi quia minus inventore dolor voluptatem vel maiores voluptatum officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, repudiandae a. Iusto, tenetur perferendis blanditiis facilis non, harum earum fugiat repellendus optio quam consectetur sed? Vitae vel aspernatur earum. Quidem.<br><br>
         </span>
+      </div> 
+      <div class="warranty">
+        <img class="warranty__img" src="src/img/garantie.svg" alt="Garantie 5ans">
       </div>
     </div>
   </div>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
-
-<script type="text/javascript">
-  $(function () {
-    $('#form').parsley().on('field:validated', function() {
-      var ok = $('.parsley-error').length === 0;
-      $('.bs-callout-info').toggleClass('hidden', !ok);
-      $('.bs-callout-warning').toggleClass('hidden', ok);
-    })
-    .on('form:submit', function() {
-      return false; // Don't submit form for this demo
-    });
-  });
-  </script>
