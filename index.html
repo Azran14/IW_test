@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="src/style.scss" />
   <link rel="stylesheet" href="src/reset.scss" />
   <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+  <link rel="stylesheet" href="src/parsley.css">
+  <script type="text/javascript" src="jquery.js"></script>
   <script defer src="src/script.js"></script>
+  <script src="parsley.min.js"></script>
   <title>IW TEST</title>
 </head>
 <body>
@@ -38,10 +41,10 @@
         <p class="form__beforetitle">Reserver votre essai de</p>
         <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
         <hr class="form__transition">
-        <form>
+        <form id="form" data-parsley-validate="">
           <div class="form__aspect">
             <label> Email: </label>
-            <input type="email" id="mail" name="user_mail" placeholder="Email" required>
+            <input type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email*" required>
           </div>
           <div class="form__radio">
             <label> Civilité: </label>
@@ -50,32 +53,32 @@
               <label for="Mme"> Mme. </label>
             </div>
             <div>
-              <input type="radio" id="M" name="civilite" value="M" required>
+              <input type="radio" data-parsley-maxlength="42" id="M" name="civilite" value="M" required>
               <label for="M"> M. </label>
             </div>
           </div>
           <div class="form__name">
             <div>
               <label> Nom: </label>
-              <input type="text" id="text1" name="lastname" placeholder="Nom" required>
+              <input type="text" id="text1" name="lastname" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="Nom*" required>
             </div>
             <div>
               <label> Prénom: </label>
-              <input type="text" id="text2" name="firstname" placeholder="Prénom" required>
+              <input type="text" id="text2" name="firstname" placeholder="Prénom*" required>
             </div>
           </div>
           <div class="form__aspect">
             <label> N° de téléphone: </label>
-            <input type="tel" pattern="[0-9]{10}" id="tel" name="phonenumber" placeholder="N° de téléphone" required>
+            <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="tel" name="phonenumber" placeholder="N° de téléphone*" required>
           </div>
           <div class="form__postal">
             <div>
               <label> Code postal: </label>
-              <input type="number" id="number" name="code" placeholder="Code postal" required>
+              <input type="number" id="number" name="code" placeholder="Code postal*" required>
             </div>
             <div>
               <label> Ville: </label>
-              <input type="text" id="text3" name="city" placeholder="Ville" required>
+              <input type="text" id="text3" name="city" placeholder="Ville*" required>
             </div>
           </div>
           <div class="form__aspect">
@@ -88,7 +91,7 @@
             </select>
           </div>
           <div class="form__btn">
-            <button>Réserver un essai</button>
+            <button type="submit" value="validate">Réserver un essai</button>
           </div>
         </form>
       </div>
@@ -111,3 +114,16 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+  $(function () {
+    $('#form').parsley().on('field:validated', function() {
+      var ok = $('.parsley-error').length === 0;
+      $('.bs-callout-info').toggleClass('hidden', !ok);
+      $('.bs-callout-warning').toggleClass('hidden', ok);
+    })
+    .on('form:submit', function() {
+      return false; // Don't submit form for this demo
+    });
+  });
+  </script>

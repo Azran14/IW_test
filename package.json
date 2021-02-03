@@ -5,10 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "contrast-js": "0.0.3",
+    "es5-shim": "^4.5.15",
     "flickity": "^2.2.2",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.5.1",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parsleyjs": "^2.9.2"
   },
   "devDependencies": {
     "sass": "^1.32.5"
