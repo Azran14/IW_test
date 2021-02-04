@@ -681,6 +681,7 @@ select {
     max-height: 3%;
   }
   .conditions {
-    height: 100vh;
+    max-height: 120vh;
+    padding-bottom: 75px;
   }
 }
