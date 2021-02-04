@@ -43,15 +43,15 @@ document.querySelector("#button2").onclick = function() {
   }
 }
 
-document.querySelector("#button3").onclick = function() {
-  if (window.getComputedStyle(document.querySelector('#validation')).display=='none'){
-  document.querySelector("#validation").style.display="grid",
-  document.querySelector("#validation").style.transition="1s",
-  document.querySelector("#main").style.display="none";
-  } else {
-  document.querySelector("#validation").style.display="none";
-  }
-}
+// document.querySelector("#button3").onclick = function() {
+//   if (window.getComputedStyle(document.querySelector('#validation')).display=='none'){
+//   document.querySelector("#validation").style.display="grid",
+//   document.querySelector("#validation").style.transition="1s",
+//   document.querySelector("#main").style.display="none";
+//   } else {
+//   document.querySelector("#validation").style.display="none";
+//   }
+// }
 
 
 $(function () {
