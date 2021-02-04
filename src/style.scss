@@ -531,7 +531,7 @@ select {
     }
   }
   .main {
-    grid-template-rows: 40% 8% 110%;
+    grid-template-rows: 45% 8% 110%;
     grid-template-columns: 100%;
     max-height: 150%;
     min-height: 150%;
@@ -675,5 +675,8 @@ select {
     margin: 20px 0px 0px 10px;
     max-width: 90%;
     max-height: 3%;
+  }
+  .conditions {
+    height: 100vh;
   }
 }
