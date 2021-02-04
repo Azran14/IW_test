@@ -172,6 +172,12 @@ input {
   cursor: pointer;
 }
 
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 
 .form__aspect {
   display: flex;
@@ -531,10 +537,9 @@ select {
     }
   }
   .main {
-    grid-template-rows: 50% 8% 110%;
+    grid-template-rows: 50vh 8vh 110vh;
     grid-template-columns: 100%;
-    max-height: 150%;
-    min-height: 150%;
+    height: calc(var(--vh, 1vh) * 50);
   }
   
   .main-carousel {
