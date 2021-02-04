@@ -591,6 +591,10 @@ select {
     top: 3%;
     left: 3%;
   }
+  .flickity-viewport {
+    height: 50vh;
+    min-height: 355px;
+  }
   .aftertitle {
     font-size: 12px;
     top: 6%;
