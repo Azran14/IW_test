@@ -531,7 +531,7 @@ select {
     }
   }
   .main {
-    grid-template-rows: 40% 8% 75%;
+    grid-template-rows: 40% 8% 120%;
     grid-template-columns: 100%;
   }
   
@@ -667,7 +667,7 @@ select {
   .warranty {
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 20px 0px 5px 10px;
+    margin: 20px 0px 0px 10px;
     max-width: 90%;
     max-height: 3%;
   }
