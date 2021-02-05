@@ -9,7 +9,7 @@ select.parsley-error,
 textarea.parsley-error {
   border: 1px solid #b22323;
 }
-.parsley-required, .parsley-type {
+.parsley-required, .parsley-type, .parsley-pattern {
   display: none;
 }
 

@@ -129,6 +129,8 @@
 
 .offer__mobile {
   display: none;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .form__img {
@@ -263,6 +265,8 @@ select {
   background-color: white;
   padding: 20px;
   max-height: 90vh;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .validation {
@@ -312,11 +316,12 @@ select {
 .conditions__btn {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
   button {
     background-image: url("/src/img/cross.svg");
     margin-bottom: 20px;
     width: 16px;
-    height: 16px;
+    height: 17px;
     border: none;
     cursor: pointer;
   }
@@ -325,6 +330,8 @@ select {
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .conditions {
     font-size: 13px;
+    overflow-y: scroll;
+    height: 100%;
   }
   .flickity-prev-next-button {
     width: 35px;
@@ -364,8 +371,16 @@ select {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    overflow: hidden;
+  }
   .title {
     font-size: 32px;
+  }
+  .conditions {
+    overflow-y: scroll;
+    font-size: 12px;
+    height: 100%;
   }
   .aftertitle {
     font-size: 20px;
@@ -449,7 +464,7 @@ select {
     }
   }
   .main {
-    grid-template-rows: 60% 10% 75%;
+    grid-template-rows: 60% 12% 75%;
     grid-template-columns: 100%;
   }
   .carousel-cell {
@@ -473,7 +488,6 @@ select {
   }
   .offer__mobile {
     display: block;
-    width: 100%;
   }
   .form {
     grid-row: 3s;
@@ -537,7 +551,7 @@ select {
     }
   }
   .main {
-    grid-template-rows: 50vh 8vh 110vh;
+    grid-template-rows: 50vh 12vh 110vh;
     grid-template-columns: 100%;
     height: calc(var(--vh, 1vh) * 50);
   }
@@ -627,8 +641,6 @@ select {
   }
   .offer__mobile {
     display: block;
-    width: 100%;
-    bottom: 0;
   }
   .form__postal, .form__name {
     flex-direction: column;

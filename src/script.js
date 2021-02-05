@@ -30,8 +30,10 @@
 document.querySelector("#button").onclick = function() {
   if (window.getComputedStyle(document.querySelector('#conditions')).display=='none'){
   document.querySelector("#conditions").style.display="block";
+  document.querySelector("#warranty").style.display="none";
   } else {
   document.querySelector("#conditions").style.display="none";
+  document.querySelector("#warranty").style.display="flex";
   }
 }
 
@@ -62,8 +64,6 @@ $(function () {
   })
 });
 
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
