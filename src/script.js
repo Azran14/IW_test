@@ -30,20 +30,20 @@
 document.querySelector("#button").onclick = function() {
   if (window.getComputedStyle(document.querySelector('#conditions')).display=='none'){
   document.querySelector("#conditions").style.display="block";
-  document.querySelector("#warranty").style.display="none";
+  document.querySelector("#form").style.display="none";
   } else {
   document.querySelector("#conditions").style.display="none";
-  document.querySelector("#warranty").style.display="flex";
+  document.querySelector("#form").style.display="flex";
   }
 }
 
 document.querySelector("#button2").onclick = function() {
   if (window.getComputedStyle(document.querySelector('#conditions')).display=='none'){
   document.querySelector("#conditions").style.display="block";
-  document.querySelector("#warranty").style.display="none";
+  document.querySelector("#form").style.display="none";
   } else {
   document.querySelector("#conditions").style.display="none";
-  document.querySelector("#warranty").style.display="flex";
+  document.querySelector("#form").style.display="flex";
   }
 }
 
