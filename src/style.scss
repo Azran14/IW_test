@@ -378,6 +378,7 @@ select {
   }
   .title {
     font-size: 32px;
+    top: 25px;
   }
   .conditions {
     overflow-y: scroll;
@@ -386,7 +387,7 @@ select {
   }
   .aftertitle {
     font-size: 20px;
-    top: 11%
+    top: 60px;
   }
   .carousel-cell {
     background-position: 50% 25%;
@@ -442,7 +443,7 @@ select {
   }
 }
 
-@media only screen and (min-width: 426px) and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (min-width: 426px) and (max-width: 767px) {
   body {
     overflow: scroll;
   }
@@ -466,7 +467,7 @@ select {
     }
   }
   .main {
-    grid-template-rows: 60% 12% 75%;
+    grid-template-rows: 539px 100px 100vh;
     grid-template-columns: 100%;
   }
   .carousel-cell {
@@ -479,11 +480,12 @@ select {
   .title {
     position: absolute;
     font-size: 24px;
+    top: 20px;
   }
   .aftertitle {
     position: absolute;
     font-size: 18px;
-    top: 9%
+    top: 45px;
   }
   .offer {
     display: none;
@@ -494,19 +496,9 @@ select {
   .form {
     grid-row: 3s;
   }
-  // .carousel-arrow {
-  //   margin-top: 30vh;
-  // }
-  // .carousel-img {
-  //   height: auto;
-  //   object-fit: cover;
-  //   min-height: 543px;
-  // }
-  // #carousel-2 {
-  //   object-position: 70% 0;
-  // }
   .btn {
-    top: 58vh;
+    bottom: 15px;
+    position: relative;
   }
   .form__img {
     margin-top: 40px;
@@ -525,6 +517,7 @@ select {
     margin: 20px 0px 0px 10px;
     max-width: 90%;
     max-height: 3%;
+    padding-bottom: 10px;
   } 
 }
 
