@@ -551,19 +551,16 @@ select {
     }
   }
   .main {
-    grid-template-rows: 50vh 14vh 110vh;
+    grid-template-rows: 500px 14vh 110vh;
     grid-template-columns: 100%;
-    height: calc(var(--vh, 1vh) * 50);
   }
   
   .main-carousel {
     min-height: 100%;
-    height: calc(var(--vh, 1vh) * 50);
   }
 
   .flickity-viewport {
     min-height: 355px;
-    height: calc(var(--vh, 1vh) * 50);
   }
   .flickity-page-dots .dot {
     width: 8px;
