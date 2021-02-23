@@ -6,14 +6,17 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="src/style.scss" />
   <link rel="stylesheet" href="src/reset.scss" />
-  <link rel="stylesheet" href="src/parsley.css">
-  <script type="text/javascript" src="jquery.js"></script>
   <script defer src="src/script.js"></script>
-  <script src="parsley.min.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="parsley.min.js"></script>  
+  <link rel="stylesheet" href="src/parsley.css">
+  
   <title>IW TEST</title>
 </head>
 <body>
-  <div class="validation" id="validation">
+  <div class="hidden validation" id="validation">
     <div class="firspart">
       <div class="image">
         <img src="/src/img/hyundai.jpg">
@@ -25,7 +28,7 @@
       <span> Merci Maurice pour votre achat <br>Passez une agréable journée<br>PS: Merci pour les données bancaires</span>
     </div>
   </div>
-  <div class="main" id="main">
+  <div class="visible main" id="main">
     <div class="slider">
       <!-- <div class="carousel">
         <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
@@ -130,12 +133,14 @@
       </div>
     </div>
   </div>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </body>
 </html>
 
 <script>
+
+  
 //   $( "form" ).submit(function( event ) {
 //   if ( $( "input" ).first().val() === ".parsley-sucess" ) {
 //     $( ".validation" ).show();
@@ -148,5 +153,22 @@
 //   }else if (a.indexOf('-slide_1.png')) {
 //     $("title").removeClass("title__black")
 // }});
+
+// $('#form').parsley();
+
+// var instance = $('#first').parsley();
+// console.log(instance.isValid()); // maxlength is 42, so field is valid
+// $('#first').attr('data-parsley-maxlength', 4);
+// console.log(instance.isValid());
+
+// $('#form').parsley().on('field:validated', function() {
+//     var ok = $('.parsley-error').length === 0;
+//     console.log(ok);
+//     $('main').toggleClass('hidden', !ok);
+//     $('validation').toggleClass('hidden', ok);
+//   })
+//   .on('form:submit', function() {
+//     return false;
+// });
 
 </script>
