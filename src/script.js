@@ -85,6 +85,10 @@ $(document).ready(function() {
   });
 });
 
+if ($(".carousel-cell__video").hasClass('is-selected')) {
+  $(".offer").addClass("hidden");
+}
+
 // $("input[name=civilite][value='']").attr('checked', true); 
 
 // var parsleyOptions = {

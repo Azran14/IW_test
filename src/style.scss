@@ -74,6 +74,13 @@ body {
   }
 }
 
+.carousel-cell__video {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .flickity-viewport {
   max-height: 100%;
 }

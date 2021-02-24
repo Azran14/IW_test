@@ -40,7 +40,10 @@
       <div class="main-carousel" id="carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
         <div class="carousel-cell" style="background-image: url(src/img/slide_1.jpg);"></div>
         <div class="carousel-cell" style="background-image: url(src/img/slide_2.jpg);"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
-        <div class="carousel-cell carousel-cell-last" style="background-image: url(src/img/slide_3.jpg);"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
+        <div class="carousel-cell" style="background-image: url(src/img/slide_3.jpg);"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
+        <div class="carousel-cell__video" id="start">
+          <div class="video" id="player"></div>
+        </div>
       </div>
       <h1 class="title title__black">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle title__black">Se satisfaire du maximum</h3>
       <img class="offer" src="src/img/offre.svg" alt="offer">
@@ -76,7 +79,7 @@
           <div class="form__name">
             <div>
               <label> Nom: </label>
-              <input type="text" id="text1" name="lastname" maxlength="32" pattern="^[a-zA-Z][a-zA-Z0-9-]{1,24}$" placeholder="Nom" required>
+              <input type="text" id="text1" name="lastname" maxlength="32" placeholder="Nom" required>
             </div>
             <div>
               <label> Prénom: </label>
@@ -94,7 +97,7 @@
             </div>
             <div>
               <label> Ville: </label>
-              <input type="text" id="text3" name="city" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="Ville" required>
+              <input type="text" id="text3" name="city" maxlength="32" placeholder="Ville" required>
             </div>
           </div>
           <div class="form__aspect">
@@ -140,7 +143,34 @@
 
 <script>
 
-  
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+
+var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'EKaobhDe8Zs',
+      playerVars: { 
+        controls: 0,
+      },
+      events: {
+        'onReady': onPlayerReady,
+      }
+    });
+  }
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function stopVideo() {
+  player.stopVideo();
+}
 //   $( "form" ).submit(function( event ) {
 //   if ( $( "input" ).first().val() === ".parsley-sucess" ) {
 //     $( ".validation" ).show();
