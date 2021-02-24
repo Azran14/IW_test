@@ -57,44 +57,44 @@
         <p class="form__beforetitle">Reserver votre essai de</p>
         <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
         <hr class="form__transition">
-        <form id="form" data-parsley-validate="">
+        <form id="form" data-parsley-validate="" data-parsley-errors-messages-disabled>
           <div class="form__aspect">
             <label> Email: </label>
-            <input type="email" data-parsley-type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email*" required>
+            <input type="email" data-parsley-type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email@mail.com" required>
           </div>
           <div class="form__radio">
             <label> Civilité: </label>
             <div>
-              <input type="radio" id="Mme" name="civilite" value="Mme" required>
+              <input type="radio" id="Mme" name="civilite" value="Mme" data-parsley-multiple="radio" id="radio1" required>
               <label for="Mme"> Mme. </label>
             </div>
             <div>
-              <input type="radio" id="M" name="civilite" value="M" required>
+              <input type="radio" id="M" name="civilite" value="M" data-parsley-multiple="radio" id="radio2" required>
               <label for="M"> M. </label>
             </div>
           </div>
           <div class="form__name">
             <div>
               <label> Nom: </label>
-              <input type="text" id="text1" name="lastname" maxlength="32" pattern="^[a-zA-Z][a-zA-Z0-9-]{1,24}$" placeholder="Nom*" required>
+              <input type="text" id="text1" name="lastname" maxlength="32" pattern="^[a-zA-Z][a-zA-Z0-9-]{1,24}$" placeholder="Nom" required>
             </div>
             <div>
               <label> Prénom: </label>
-              <input type="text" id="text2" name="firstname" placeholder="Prénom*" required>
+              <input type="text" id="text2" name="firstname" placeholder="Prénom" required>
             </div>
           </div>
           <div class="form__aspect">
             <label> N° de téléphone: </label>
-            <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="tel" name="phonenumber" placeholder="N° de téléphone*" required>
+            <input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="tel" name="phonenumber" maxlength="10" placeholder="0000000000" required>
           </div>
           <div class="form__postal">
             <div>
               <label> Code postal: </label>
-              <input type="number" maxlength="5" data-parsley-maxlength="5" pattern="[0-9]{5}" id="number" name="code" placeholder="Code postal*" required>
+              <input type="number" maxlength="5" data-parsley-maxlength="5" pattern="[0-9]{5}" id="number" name="code" placeholder="00000" required>
             </div>
             <div>
               <label> Ville: </label>
-              <input type="text" id="text3" name="city" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="Ville*" required>
+              <input type="text" id="text3" name="city" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="Ville" required>
             </div>
           </div>
           <div class="form__aspect">

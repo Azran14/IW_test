@@ -4,6 +4,21 @@
 }
 
 @font-face {
+  font-family: "Hyundai-regular";
+  src: url("../src/fonts/hyundaisanshead-regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Hyundai-medium";
+  src: url("../src/fonts/hyundaisanshead-medium.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Hyundai-bold";
+  src: url("../src/fonts/hyundaisanshead-bold.ttf") format("woff");
+}
+
+@font-face {
   font-family: "Montserrat-regular";
   src: url("../src/fonts/Montserrat-Regular.ttf") format("woff");
 }
@@ -75,7 +90,7 @@ body {
   color: white;
   position: fixed;
   top: 30px;
-  font-family: "Montserrat-SemiBold";
+  font-family: "Hyundai-regular";
   font-size: 40px;
   left: 30px;
   mix-blend-mode: exclusion;
@@ -86,7 +101,7 @@ body {
   color: white;
   position: fixed;
   top: 75px;
-  font-family: "Montserrat-regular";
+  font-family: "Hyundai-regular";
   font-size: 24px;
   left: 30px;
   mix-blend-mode: exclusion;
@@ -98,7 +113,7 @@ body {
   color: white;
   position: absolute;
   bottom: 30px;
-  font-family: "Montserrat-regular";
+  font-family: "Hyundai-regular";
   font-size: 22px;
   left: 30px;
 }
@@ -153,12 +168,12 @@ body {
 
 .form__beforetitle {
   line-height: 30px;
-  font-family: "Montserrat-medium";
+  font-family: "Hyundai-regular";
   font-size: 24px;
 }
 
 .form__title {
-  font-family: "Montserrat-Bold";
+  font-family: "Hyundai-Bold";
   font-size: 28px;
 }
 
@@ -185,6 +200,19 @@ input {
   border: 1px solid;
   border-color: lightgray;
   cursor: pointer;
+  font-family: "Hyundai-regular";
+}
+
+input[type="radio"]:checked:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #002c5f;
 }
 
 input[type="number"]::-webkit-inner-spin-button, 
@@ -199,7 +227,7 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   margin-top: 10px;
   label {
-    font-family: "Montserrat-SemiBold";
+    font-family: "Hyundai-regular";
   }
 }
 
@@ -210,7 +238,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 110px;
   }
   label {
-    font-family: "Montserrat-SemiBold";
+    font-family: "Hyundai-regular";
   }
 }
 
@@ -226,7 +254,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 20px;
   }
   label {
-    font-family: "Montserrat-SemiBold";
+    font-family: "Hyundai-regular";
   }
 }
 
@@ -238,6 +266,7 @@ select {
   border: 1px solid;
   border-color: lightgray;
   cursor: pointer;
+  font-family: "Hyundai-regular";
 }
 
 .form__btn {
@@ -352,7 +381,7 @@ select {
     height: 35px;
   }
   .offer {
-    width: 12%;
+    width: 15%;
   }
   .form {
     overflow-y: scroll;
@@ -454,7 +483,7 @@ select {
     width: 45%;
   }
   .offer {
-    width: 10%;
+    width: 15%;
   }
   .warranty .warranty__img {
     width: 35%;

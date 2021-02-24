@@ -85,6 +85,17 @@ $(document).ready(function() {
   });
 });
 
+// $("input[name=civilite][value='']").attr('checked', true); 
+
+// var parsleyOptions = {
+//   errorClass: "error",
+//   successClass: "valid",
+//   errorsMessagesDisabled: !0,
+//   classHandler: function(t) {
+//       return t.$element.closest("fieldset")
+//   }
+// };
+
 // $('#form').parsley();
 
 // var instance = $('#first').parsley();
