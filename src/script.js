@@ -85,9 +85,9 @@ $(document).ready(function() {
   });
 });
 
-if ($(".carousel-cell__video").hasClass('is-selected')) {
-  $(".offer").addClass("hidden");
-}
+// if ($('#start').hasClass("is-selected")) {
+//   $(".main").removeClass("visible").addClass("hidden");
+// }
 
 // $("input[name=civilite][value='']").attr('checked', true); 
 
