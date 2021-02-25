@@ -38,15 +38,21 @@
         <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="src/img/slide_3.jpg" alt="Hyundai Tucson">
       </div> -->
       <div class="main-carousel" id="carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
-        <div class="carousel-cell" style="background-image: url(src/img/slide_1.jpg);"></div>
-        <div class="carousel-cell" style="background-image: url(src/img/slide_2.jpg);"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
-        <div class="carousel-cell" style="background-image: url(src/img/slide_3.jpg);"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
-        <div class="carousel-cell" id="start">
-          <div class="video" id="player"></div>
+        <div class="carousel-cell" id="carousel-1" style="background-image: url(src/img/slide_1.jpg);"></div>
+        <div class="carousel-cell" id="carousel-2" style="background-image: url(src/img/slide_2.jpg);"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
+        <div class="carousel-cell" id="carousel-3" style="background-image: url(src/img/slide_3.jpg);"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
+        <div class="carousel-cell" id="carousel-4">
+          <video
+        width="100%"
+        height="100%"
+        class="video"
+        src="src/video/tucson.mp4"
+        controls
+          ></video>
         </div>
       </div>
-      <h1 class="title title__black">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle title__black">Se satisfaire du maximum</h3>
-      <img class="offer" src="src/img/offre.svg" alt="offer">
+      <h1 class="title" id="visible-title">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle" id="visible-text">Se satisfaire du maximum</h3>
+      <img class="offer" id="visible-offer" src="src/img/offre.svg" alt="offer">
       <div class="btn">
         <button id="button">Voir conditions</button>
       </div>
@@ -143,34 +149,31 @@
 
 <script>
 
-var tag = document.createElement('script');
+// var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
 
-var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '100%',
-      width: '100%',
-      videoId: 'EKaobhDe8Zs',
-      playerVars: { 
-        controls: 0,
-      },
-      events: {
-        'onReady': onPlayerReady,
-      }
-    });
-  }
+// var player;
+//   function onYouTubeIframeAPIReady() {
+//     player = new YT.Player('ytplayer', {
+//       events: {
+//         'onReady': onPlayerReady,
+//       }
+//     });
+//   }
 
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+// function onPlayerReady(event) {
+//   $("#start").mouseover(function() {
+//     event.target.playVideo();
+//   });
+// }
 
-function stopVideo() {
-  player.stopVideo();
-}
+// function stopVideo() {
+//   player.stopVideo();
+// }
+
 //   $( "form" ).submit(function( event ) {
 //   if ( $( "input" ).first().val() === ".parsley-sucess" ) {
 //     $( ".validation" ).show();

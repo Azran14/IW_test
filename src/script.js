@@ -85,6 +85,24 @@ $(document).ready(function() {
   });
 });
 
+$("#carousel-4").on("mouseover", function() {
+  $("#visible-text, #visible-offer, #visible-title").hide();
+});
+
+$("#carousel-1, #carousel-2, #carousel-3").on("mouseover", function() {
+  $("#visible-text, #visible-offer, #visible-title").show();
+});
+
+$("#carousel-3").on("mouseover", function() {
+  $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
+  $("#visible-title").addClass("title__black").removeClass("title");
+});
+
+$("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
+  $("#visible-text").addClass("aftertitle").removeClass("aftertitle__black");
+  $("#visible-title").addClass("title").removeClass("title__black");
+});
+
 // if ($('#start').hasClass("is-selected")) {
 //   $(".main").removeClass("visible").addClass("hidden");
 // }

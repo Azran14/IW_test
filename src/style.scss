@@ -93,7 +93,16 @@ body {
   font-family: "Hyundai-regular";
   font-size: 40px;
   left: 30px;
-  mix-blend-mode: exclusion;
+}
+
+.title__black {
+  color: black;
+  z-index: 4;
+  position: fixed;
+  top: 30px;
+  font-family: "Hyundai-regular";
+  font-size: 40px;
+  left: 30px;
 }
 
 .aftertitle {
@@ -104,8 +113,16 @@ body {
   font-family: "Hyundai-regular";
   font-size: 24px;
   left: 30px;
-  mix-blend-mode: exclusion;
-  
+}
+
+.aftertitle__black {
+  z-index: 4;
+  color: black;
+  position: fixed;
+  top: 75px;
+  font-family: "Hyundai-regular";
+  font-size: 24px;
+  left: 30px;
 }
 
 .text__slider {
