@@ -85,13 +85,13 @@ $(document).ready(function() {
   });
 });
 
-$("#carousel-4").on("mouseover", function() {
-  $("#visible-text, #visible-offer, #visible-title").hide();
-});
+// $("#carousel-4").on("mouseover", function() {
+//   $("#visible-text, #visible-offer, #visible-title").hide();
+// });
 
-$("#carousel-1, #carousel-2, #carousel-3").on("mouseover", function() {
-  $("#visible-text, #visible-offer, #visible-title").show();
-});
+// $("#carousel-1, #carousel-2, #carousel-3").on("mouseover", function() {
+//   $("#visible-text, #visible-offer, #visible-title").show();
+// });
 
 $("#carousel-3").on("mouseover", function() {
   $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
