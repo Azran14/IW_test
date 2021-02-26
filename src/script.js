@@ -103,8 +103,17 @@ $("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
   $("#visible-title").addClass("title").removeClass("title__black");
 });
 
+
+// -----------------------------------
+
+
 // https://codepen.io/desandro/pen/dpPzab
 // https://github.com/metafizzy/flickity/issues/104
+// https://developer.mozilla.org/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
+// HTMLMediaElement.duration
+
+// -----------------------------------
+
 
 // if ($('#start').hasClass("is-selected")) {
 //   $(".main").removeClass("visible").addClass("hidden");
