@@ -103,6 +103,9 @@ $("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
   $("#visible-title").addClass("title").removeClass("title__black");
 });
 
+// https://codepen.io/desandro/pen/dpPzab
+// https://github.com/metafizzy/flickity/issues/104
+
 // if ($('#start').hasClass("is-selected")) {
 //   $(".main").removeClass("visible").addClass("hidden");
 // }
