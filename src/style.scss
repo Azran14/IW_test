@@ -136,12 +136,6 @@ video {
   left: 30px;
 }
 
-.carousel-cell:nth-child(2).is-selected {
-  .title {
-    color: black;
-  }
-}
-
 .text__slider {
   z-index: 4;
   color: white;
@@ -470,6 +464,9 @@ select {
   .carousel-cell {
     background-position: 50% 25%;
   }
+  .video {
+    background-position: 50% 25%;
+  }
   .flickity-prev-next-button {
     width: 30px;
     height: 30px;
@@ -554,6 +551,11 @@ select {
   .carousel-cell {
     height: 100%;
   }
+
+  video {
+    height: 100%;
+  }
+
   .flickity-prev-next-button {
     width: 25px;
     height: 25px;
@@ -644,6 +646,12 @@ select {
   }
 
   .carousel-cell {
+    background-position: 50% 25%;
+    min-height: 100%;
+    height: calc(var(--vh, 1vh) * 50);
+  }
+
+  .video {
     background-position: 50% 25%;
     min-height: 100%;
     height: calc(var(--vh, 1vh) * 50);
