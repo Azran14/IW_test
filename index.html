@@ -11,7 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
   <script src="parsley.min.js"></script>  
-  <link rel="stylesheet" href="src/parsley.css">
+  <link rel="stylesheet" href="src/parsley.scss">
   
   <title>IW TEST</title>
 </head>
@@ -72,14 +72,12 @@
             <input type="email" data-parsley-type="email" id="mail" name="user_mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email@mail.com" required>
           </div>
           <div class="form__radio">
-            <label> Civilité: </label>
+            <label for="civilite"> Civilité: </label>
             <div>
               <input type="radio" id="Mme" name="civilite" value="Mme" data-parsley-multiple="radio" id="radio1" required>
-              <label for="Mme"> Mme. </label>
-            </div>
-            <div>
+              Mme.
               <input type="radio" id="M" name="civilite" value="M" data-parsley-multiple="radio" id="radio2" required>
-              <label for="M"> M. </label>
+              M.
             </div>
           </div>
           <div class="form__name">
