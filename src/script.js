@@ -93,6 +93,18 @@ $(document).ready(function() {
 //   $("#visible-text, #visible-offer, #visible-title").show();
 // });
 
+
+// if($("#carousel-3").hasClass("is-selected") ) {
+//   console.log("toto");
+//   $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
+//   $("#visible-title").addClass("title__black").removeClass("title");
+// };
+
+// if($("#carousel-1, #carousel-2, #carousel-4").hasClass("carousel-cell") ) {
+//   $("#visible-text").addClass("aftertitle").removeClass("aftertitle__black");
+//   $("#visible-title").addClass("title").removeClass("title__black");
+// };
+
 $("#carousel-3").on("mouseover", function() {
   $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
   $("#visible-title").addClass("title__black").removeClass("title");
