@@ -448,7 +448,7 @@ select {
       }
     }
   }
-  .aftertitle {
+  .aftertitle, .aftertitle__black {
     font-size: 24px;
   }
   .warranty .warranty__img {
@@ -460,7 +460,7 @@ select {
   .main {
     overflow: hidden;
   }
-  .title {
+  .title, .title__black {
     font-size: 32px;
     top: 25px;
   }
@@ -469,7 +469,7 @@ select {
     font-size: 12px;
     height: 100%;
   }
-  .aftertitle {
+  .aftertitle, .aftertitle__black {
     font-size: 20px;
     top: 60px;
   }
@@ -575,12 +575,12 @@ select {
     width: 25px;
     height: 25px;
   }
-  .title {
+  .title, .title__black {
     position: absolute;
     font-size: 24px;
     top: 20px;
   }
-  .aftertitle {
+  .aftertitle, .aftertitle__black {
     position: absolute;
     font-size: 18px;
     top: 45px;
@@ -694,19 +694,19 @@ select {
   // .carousel-arrow {
   //   margin-top: 150px;
   // }
-  .title, .aftertitle, .offer {
+  .title, .aftertitle, .offer .title__black, .aftertitle__black {
     position: absolute;
   }
   .btn {
     position: relative;
   }
-  .title {
+  .title, .title__black {
     font-size: 20px;
     letter-spacing: -1px;
     top: 12px;
     left: 3%;
   }
-  .aftertitle {
+  .aftertitle, .aftertitle__black {
     font-size: 12px;
     top: 32px;
     left: 3%;
@@ -747,6 +747,17 @@ select {
     label {
       font-size: 12px;
     }
+  }
+  input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #002c5f;
   }
   .form__radio {
     div {
