@@ -1,3 +1,20 @@
+// var jsonData = {
+//   "logo" : "src/img/logo.svg",
+//   "az" : "Nous sommes les conditions"
+// }
+
+// function populateContent(img)
+
+// { 
+// photo = document.getElementById("#logo");
+// //document.getElementById("imageid").src="../images/audir8.png";
+// photo.src = img.logo;
+// az = document.getElementById("#az");
+// az.innerHTML = "<b>Top Speed: </b>"+img.az;
+// }
+
+// populateContent(jsonData);
+
 document.querySelector("#button").onclick = function() {
   if (window.getComputedStyle(document.querySelector('#conditions')).display=='none'){
   document.querySelector("#conditions").style.display="block";
@@ -28,7 +45,6 @@ require('parsleyjs');
 $(document).ready(function() {
   $("#form").on('submit', function(e) {
      e.preventDefault();
-     console.log("toto");
      $(".validation").addClass("visible");
      $(".main").removeClass("visible").addClass("hidden");
   });
@@ -50,6 +66,7 @@ $("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
 // https://codepen.io/desandro/pen/dpPzab
 // https://github.com/metafizzy/flickity/issues/104
 // https://developer.mozilla.org/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
+// https://stackoverflow.com/questions/49406021/displaying-an-image-on-html-with-a-json-file
 // HTMLMediaElement.duration
 // Evenement propagation
 
