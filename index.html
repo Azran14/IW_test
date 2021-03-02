@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="src/style.scss" />
-  <link rel="stylesheet" href="src/reset.scss" />
+  <link rel="stylesheet" href="src/style.scss"/>
+  <link rel="stylesheet" href="src/reset.scss"/>
   <script defer src="src/script.js"></script>
   <script type="text/javascript" src="jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
-  <script src="parsley.min.js"></script>  
+  <script src="parsley.min.js"></script>
   <link rel="stylesheet" href="src/parsley.scss">
   
   <title>IW TEST</title>
@@ -45,8 +45,8 @@
           <video
         class="video"
         id="video"
-        src="src/video/tucson.mp4"
         autoplay
+        src="src/video/tucson.mp4"
         loop
         onmouseover="this.play()" onmouseout="this.pause();"
           ></video>
@@ -63,7 +63,7 @@
     </div>
     <div class="form">
       <div class="form__container">
-        <img class="form__img" src="src/img/logo.svg" id="logo" alt="Logo Hyundai">
+        <img class="form__img" id="logo" src="src/img/logo.svg" alt="Logo Hyundai">
         <p class="form__beforetitle">Reserver votre essai de</p>
         <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
         <hr class="form__transition">
@@ -147,6 +147,19 @@
 </html>
 
 <script>
+
+// var json = '{"URL_video":"src/video/tucson.mp4","URL_logo":"src/img/logo.svg"}'
+// var obj = JSON.parse(json);
+// document.getElementById("video").src = obj.URL_video;
+// document.getElementById("logo").src = obj.URL_logo;
+
+// var obj = JSON.parse('{"URL_video":"src/video/tucson.mp4","URL_logo":"src/img/logo.svg"}');
+
+// obj.URL_video = new Object(obj);
+
+// document.getElementById("video").src = obj.URL_video;
+// document.getElementById("logo").src = obj.URL_logo;
+
 
 // jQuery(document).ready(function(){
 //   var $carousel = $('.main-carousel').flickity();
