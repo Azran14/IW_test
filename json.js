@@ -8,7 +8,7 @@ $(document).ready(function(){
       "URL_video":"/tucson.8c2c0d78.mp4",
       "URL_offer":"/offre.0e78da5a.svg",
       "URL_offer_mobile":"/offerbis.508314c1.svg",
-      "URL_warranty":"/garantie.be35aa77.svg"
+      "URL_warranty":"src/img/garantie.svg"
     }
   ];
 
