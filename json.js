@@ -13,15 +13,15 @@ $(document).ready(function(){
     }
   ];
 
-  $.each(urldata, function (index, obj=JSON.parse(urldata)) {           
-    document.getElementById("logo").src = obj.URL_logo;
+  $.each(urldata, function (index, value) {           
+    document.getElementById("logo").src = value.URL_logo;
     document.getElementById("carousel-1").style.backgroundImage = "url("+this.URL_sliderOne+")";
     document.getElementById("carousel-2").style.backgroundImage = "url("+this.URL_sliderTwo+")";
     document.getElementById("carousel-3").style.backgroundImage = "url("+this.URL_sliderThree+")";
-    document.getElementById("video").src = obj.URL_video;
-    document.getElementById("offer").src = obj.URL_offer;
-    document.getElementById("offer-mobile").src = obj.URL_offer_mobile;
-    document.getElementById("warranty-img").src = obj.URL_warranty;
-    document.getElementById("conditions-text").innerHTML = obj.URL_conditions;
+    document.getElementById("video").src = value.URL_video;
+    document.getElementById("offer").src = value.URL_offer;
+    document.getElementById("offer-mobile").src = value.URL_offer_mobile;
+    document.getElementById("warranty-img").src = value.URL_warranty;
+    document.getElementById("conditions-text").innerHTML = value.URL_conditions;
   });
 });
