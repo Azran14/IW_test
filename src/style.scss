@@ -343,8 +343,8 @@ select {
   display: none;
   background-color: white;
   padding: 20px;
-  max-height: 100vh;
   height: 100vh;
+  min-width: 30%;
   overflow: auto;
 }
 
