@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="src/style.scss"/>
   <link rel="stylesheet" href="src/reset.scss"/>
+  <script defer src="json.js"></script>
   <script defer src="src/script.js"></script>
   <script type="text/javascript" src="jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -38,32 +39,31 @@
         <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="src/img/slide_3.jpg" alt="Hyundai Tucson">
       </div> -->
       <div class="main-carousel" id="carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
-        <div class="carousel-cell" id="carousel-1" style="background-image: url(src/img/slide_1.jpg);"></div>
-        <div class="carousel-cell" id="carousel-2" style="background-image: url(src/img/slide_2.jpg);"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
-        <div class="carousel-cell" id="carousel-3" style="background-image: url(src/img/slide_3.jpg);"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
+        <div class="carousel-cell" id="carousel-1"></div>
+        <div class="carousel-cell" id="carousel-2"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
+        <div class="carousel-cell" id="carousel-3"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
         <div class="carousel-cell" id="carousel-4">
           <video
         class="video"
         id="video"
         autoplay
-        src="src/video/tucson.mp4"
         loop
         onmouseover="this.play()" onmouseout="this.pause();"
           ></video>
         </div>
       </div>
       <h1 class="title" id="visible-title">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle" id="visible-text">Se satisfaire du maximum</h3>
-      <img class="offer" id="visible-offer" src="src/img/offre.svg" alt="offer">
+      <img class="offer" id="offer" alt="offer">
       <div class="btn">
         <button id="button">Voir conditions</button>
       </div>
     </div>
     <div class="offer__mobile">
-      <img src="src/img/offerbis.svg" alt="offer">
+      <img alt="offer" id="offer-mobile">
     </div>
     <div class="form">
       <div class="form__container">
-        <img class="form__img" id="logo" src="src/img/logo.svg" alt="Logo Hyundai">
+        <img class="form__img" id="logo" src="" alt="Logo Hyundai">
         <p class="form__beforetitle">Reserver votre essai de</p>
         <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
         <hr class="form__transition">
@@ -137,7 +137,7 @@
         </span>
       </div> 
       <div class="warranty" id="warranty">
-        <img class="warranty__img" src="src/img/garantie.svg" alt="Garantie 5ans">
+        <img class="warranty__img" id="warranty-img" alt="Garantie 5ans">
       </div>
     </div>
   </div>
@@ -147,7 +147,6 @@
 </html>
 
 <script>
-
 // var json = '{"URL_video":"src/video/tucson.mp4","URL_logo":"src/img/logo.svg"}'
 // var obj = JSON.parse(json);
 // document.getElementById("video").src = obj.URL_video;
@@ -159,7 +158,6 @@
 
 // document.getElementById("video").src = obj.URL_video;
 // document.getElementById("logo").src = obj.URL_logo;
-
 
 // jQuery(document).ready(function(){
 //   var $carousel = $('.main-carousel').flickity();
