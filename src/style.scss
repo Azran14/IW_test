@@ -22,6 +22,42 @@ body {
   overflow: hidden;
 }
 
+input.parsley-success,
+select.parsley-success,
+div.parsley-success,
+textarea.parsley-success {
+  border: 1px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+div.parsley-error,
+textarea.parsley-error {
+  input:focus {
+    border: 1px solid #b22323;
+  }
+  border: 1px solid #b22323;
+}
+
+
+
+.parsley-required, .parsley-type, .parsley-pattern {
+  display: none;
+}
+
+.parsley-errors-list {
+  margin: 10px 0 3px;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
 .hidden {
   display: none;
 }

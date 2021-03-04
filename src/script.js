@@ -1,20 +1,3 @@
-// var jsonData = {
-//   "logo" : "src/img/logo.svg",
-//   "az" : "Nous sommes les conditions"
-// }
-
-// function populateContent(img)
-
-// { 
-// photo = document.getElementById("#logo");
-// //document.getElementById("imageid").src="../images/audir8.png";
-// photo.src = img.logo;
-// az = document.getElementById("#az");
-// az.innerHTML = "<b>Top Speed: </b>"+img.az;
-// }
-
-// populateContent(jsonData);
-
 document.querySelector("#button").onclick = function() {
   if (window.getComputedStyle(document.querySelector('#conditions')).display=='none'){
   document.querySelector("#conditions").style.display="block";
@@ -177,3 +160,20 @@ $("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
 //       return true;
 //   });
 // });
+
+// var jsonData = {
+//   "logo" : "src/img/logo.svg",
+//   "az" : "Nous sommes les conditions"
+// }
+
+// function populateContent(img)
+
+// { 
+// photo = document.getElementById("#logo");
+// //document.getElementById("imageid").src="../images/audir8.png";
+// photo.src = img.logo;
+// az = document.getElementById("#az");
+// az.innerHTML = "<b>Top Speed: </b>"+img.az;
+// }
+
+// populateContent(jsonData);
