@@ -28,13 +28,6 @@
   </div>
   <div class="visible main" id="main">
     <div class="slider">
-      <!-- <div class="carousel">
-        <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
-        <button type="button" id="carousel-arrow-next" class="carousel-arrow carousel-arrow-next" arial-label="Image suivante"></button>
-        <img id="carousel-0" class="carousel-img carousel-img-displayed" src="src/img/slide_1.jpg" alt="Hyundai Tucson">
-        <img id="carousel-1" class="carousel-img carousel-img-noDisplay" src="src/img/slide_2.jpg" alt="Hyundai Tucson">
-        <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="src/img/slide_3.jpg" alt="Hyundai Tucson">
-      </div> -->
       <div class="main-carousel" id="carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
         <div class="carousel-cell" id="carousel-1"></div>
         <div class="carousel-cell" id="carousel-2"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
@@ -144,86 +137,3 @@
 
 </body>
 </html>
-
-<script>
-// var json = '{"URL_video":"src/video/tucson.mp4","URL_logo":"src/img/logo.svg"}'
-// var obj = JSON.parse(json);
-// document.getElementById("video").src = obj.URL_video;
-// document.getElementById("logo").src = obj.URL_logo;
-
-// var obj = JSON.parse('{"URL_video":"src/video/tucson.mp4","URL_logo":"src/img/logo.svg"}');
-
-// obj.URL_video = new Object(obj);
-
-// document.getElementById("video").src = obj.URL_video;
-// document.getElementById("logo").src = obj.URL_logo;
-
-// jQuery(document).ready(function(){
-//   var $carousel = $('.main-carousel').flickity();
-
-
-//   $carousel.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
-//   if ( typeof cellIndex == '2' ) {
-//       $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
-//       $("#visible-title").addClass("title__black").removeClass("title");
-//     };
-//   });
-// });
-
-
-// var tag = document.createElement('script');
-
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
-
-// var player;
-//   function onYouTubeIframeAPIReady() {
-//     player = new YT.Player('ytplayer', {
-//       events: {
-//         'onReady': onPlayerReady,
-//       }
-//     });
-//   }
-
-// function onPlayerReady(event) {
-//   $("#start").mouseover(function() {
-//     event.target.playVideo();
-//   });
-// }
-
-// function stopVideo() {
-//   player.stopVideo();
-// }
-
-//   $( "form" ).submit(function( event ) {
-//   if ( $( "input" ).first().val() === ".parsley-sucess" ) {
-//     $( ".validation" ).show();
-//     return;
-//   }
-// });
-// $(function () {
-//   if (a.indexOf('-slide_3.png')) {
-//   $("title").addClass("title__black");
-//   }else if (a.indexOf('-slide_1.png')) {
-//     $("title").removeClass("title__black")
-// }});
-
-// $('#form').parsley();
-
-// var instance = $('#first').parsley();
-// console.log(instance.isValid()); // maxlength is 42, so field is valid
-// $('#first').attr('data-parsley-maxlength', 4);
-// console.log(instance.isValid());
-
-// $('#form').parsley().on('field:validated', function() {
-//     var ok = $('.parsley-error').length === 0;
-//     console.log(ok);
-//     $('main').toggleClass('hidden', !ok);
-//     $('validation').toggleClass('hidden', ok);
-//   })
-//   .on('form:submit', function() {
-//     return false;
-// });
-
-</script>
