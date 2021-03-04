@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var url_tucson = [
+  var tucson = [
     {
       "URL_logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1200px-Hyundai_Motor_Company_logo.svg.png",
       "URL_sliderOne":"https://nsm09.casimages.com/img/2021/03/03//21030305224425871417294155.jpg",
@@ -12,20 +12,19 @@ $(document).ready(function(){
       "URL_conditions":"<br> TUCSON : (1) Exemple pour un Hyundai TUCSON Nouvelle G&eacute;n&eacute;ration 1.6 T-GDI 150 iBVM hybrid 48V Intuitive neuf en Location Longue Dur&eacute;e sur 49 mois / 40 000 km, (2) <strong>SANS APPORT</strong>, 49 loyers de <strong>360&euro;</strong> et le Pack SANS ENGAGEMENT inclus(3). <strong><u>Mod&egrave;le pr&eacute;sent&eacute;</u></strong>&nbsp;: Hyundai TUCSON Nouvelle G&eacute;n&eacute;ration 1.6 T-GDI 150 DCT-7 hybrid 48V Executive avec peinture m&eacute;tallis&eacute;e : LLD sur 49 mois / 40 000 km, (2) <strong>SANS APPORT</strong>, 49 loyers de <strong>585&euro;</strong> et le Pack SANS ENGAGEMENT inclus<sup>(3)</sup>. (3) Possibilit&eacute; de r&eacute;silier &agrave; tout moment &agrave; partir du 7&egrave;me mois et 6 000 km minimum parcourus avec le Pack SANS ENGAGEMENT, avec paiement de frais de remise &agrave; l'&eacute;tat standard et du kilom&eacute;trage exc&eacute;dentaire &eacute;ventuel (prorata temporis du kilom&eacute;trage contractuel). Offre r&eacute;serv&eacute;e aux particuliers et limit&eacute;e aux 300 premiers contrats souscrits en Location Longue Dur&eacute;e, valable du <strong><u>01/02/2021 au 28/02/2021</u></strong> dans le r&eacute;seau participant, <u>dans la limite des stocks disponibles</u>, si acceptation par Arval Service Lease, RCS Paris 352 256 424 . Hyundai Leasing est la marque sous laquelle Hyundai distribue les produits de Arval Service Lease. <br>"
     }
   ];
-  // var url_bayon = [
-  //   {
-  //     "URL_logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1200px-Hyundai_Motor_Company_logo.svg.png",
-  //     "URL_sliderOne":"/slide_11.2b0f5d8f.jpg",
-  //     "URL_sliderTwo":"/slide_12.068ff6e3.jpg",
-  //     "URL_sliderThree":"/slide_13.86bdcba3.jpg",
-  //     "URL-sliderFour":"/slide_14.2093bf8b.jpg",
-  //     // "URL_video":"/tucson.8c2c0d78.mp4",
-  //     "URL_offer":"/offre.0e78da5a.svg",
-  //     "URL_offer_mobile":"/offerbis.508314c1.svg",
-  //     "URL_warranty":"/garantie.be35aa77.svg"
-  //   }
-  // ];
-  $.each(url_tucson, function (index, value) {
+  var kona = [
+    {
+      "URL_logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/1200px-Hyundai_Motor_Company_logo.svg.png",
+      "URL_sliderOne":"https://nsm09.casimages.com/img/2021/03/04//21030410333825871417295116.jpg",
+      "URL_sliderTwo":"https://nsm09.casimages.com/img/2021/03/04//21030410333925871417295117.jpg",
+      "URL_sliderThree":"https://nsm09.casimages.com/img/2021/03/04//21030410333825871417295115.jpg",
+      "URL_video":"https://v1.casimages.com/v/2021/03/04//LwKrLb-kona.mp4",
+      "URL_offer":"/offre.0e78da5a.svg",
+      "URL_offer_mobile":"/offerbis.508314c1.svg",
+      "URL_warranty":"/garantie.be35aa77.svg"
+    }
+  ];
+  $.each(tucson, function (index, value) {
     document.getElementById("logo").src = value.URL_logo;
     document.getElementById("carousel-1").style.backgroundImage = "url("+this.URL_sliderOne+")";
     document.getElementById("carousel-2").style.backgroundImage = "url("+this.URL_sliderTwo+")";
@@ -35,6 +34,6 @@ $(document).ready(function(){
     document.getElementById("offer").src = value.URL_offer;
     document.getElementById("offer-mobile").src = value.URL_offer_mobile;
     document.getElementById("warranty-img").src = value.URL_warranty;
-    document.getElementById("conditions-text").innerHTML = value.URL_conditions;
+    // document.getElementById("conditions-text").innerHTML = value.URL_conditions;
   });
 });
