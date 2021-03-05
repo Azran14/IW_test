@@ -29,9 +29,9 @@
   <div class="visible main" id="main">
     <div class="slider">
       <div class="main-carousel" id="carousel" data-flickity='{ "contain": true, "wrapAround": true, "autoPlay": true }'>
-        <div class="carousel-cell" id="carousel-1"></div>
-        <div class="carousel-cell" id="carousel-2"><h3 class="text__slider">Nouvel habitacle spacieux.</h3></div>
-        <div class="carousel-cell" id="carousel-3"><div class="carousel-bg"></div><h3 class="text__slider">Nouvelles motorisations. <br> Existe en version hybride</h3></div>
+        <div class="carousel-cell" id="carousel-1"><h3 class="text__slider" id="carousel-text-1"></h3></div>
+        <div class="carousel-cell" id="carousel-2"><h3 class="text__slider" id="carousel-text-2"></h3></div>
+        <div class="carousel-cell" id="carousel-3"><h3 class="text__slider" id="carousel-text-3"></h3></div>
         <div class="carousel-cell" id="carousel-4">
           <video
         class="video"
@@ -42,7 +42,7 @@
           ></video>
         </div>
       </div>
-      <h1 class="title" id="visible-title">Nouveau Hyundai TUCSON</h1><h3 class="aftertitle" id="visible-text">Se satisfaire du maximum</h3>
+      <h1 class="title" id="title"></h1><h3 class="aftertitle" id="aftertitle"></h3>
       <img class="offer" id="offer" alt="offer">
       <div class="btn">
         <button id="button">Voir conditions</button>
@@ -54,8 +54,8 @@
     <div class="form">
       <div class="form__container">
         <img class="form__img" id="logo" src="" alt="Logo Hyundai">
-        <p class="form__beforetitle">Reserver votre essai de</p>
-        <h2 class="form__title">Nouveau Hyundai TUCSON</h2>
+        <p class="form__beforetitle">Reserver votre essai du</p>
+        <h2 class="form__title" id="title-form"></h2>
         <hr class="form__transition">
         <form id="form" data-parsley-validate="" data-parsley-errors-messages-disabled>
           <div class="form__aspect">

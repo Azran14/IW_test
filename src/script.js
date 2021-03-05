@@ -34,13 +34,13 @@ $(document).ready(function() {
 });
 
 $("#carousel-3").on("mouseover", function() {
-  $("#visible-text").addClass("aftertitle__black").removeClass("aftertitle");
-  $("#visible-title").addClass("title__black").removeClass("title");
+  $("#aftertitle").addClass("aftertitle__black").removeClass("aftertitle");
+  $("#title").addClass("title__black").removeClass("title");
 });
 
 $("#carousel-1, #carousel-2, #carousel-4").on("mouseover", function() {
-  $("#visible-text").addClass("aftertitle").removeClass("aftertitle__black");
-  $("#visible-title").addClass("title").removeClass("title__black");
+  $("#aftertitle").addClass("aftertitle").removeClass("aftertitle__black");
+  $("#title").addClass("title").removeClass("title__black");
 });
 
 // -----------------------------------
